@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "pixelrealms:lightorb"
+    }
+  },
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "result": {
+      "count": 1,
+      "id": "pixelrealms:light_block"
+    },
+  "show_notification": true
+  }

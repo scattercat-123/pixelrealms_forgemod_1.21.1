@@ -1,0 +1,14 @@
+{
+  "item.pixelrealms.lightorb": "Light Orb",
+  "item.pixelrealms.raw_lightorb": "Raw Light Orb",
+  "item.pixelrealms.chisel": "Chisel",
+  "item.pixelrealms.wrench": "Wrench",
+  "item.pixelrealms.glow_wrench": "Glow Wrench",
+
+  "block.pixelrealms.light_block": "Light Block",
+  "block.pixelrealms.raw_light_block": "Raw Light Block",
+  "block.pixelrealms.light_ore": "Light Ore",
+  "block.pixelrealms.light_deepslate_ore": "Deepslate Light Ore",
+  "block.pixelrealms.solar_panel": "Solar Panel",
+  "creativetab.pixelrealms.light_items" : "Light Items"
+}

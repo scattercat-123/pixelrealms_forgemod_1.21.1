@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "pixelrealms:block/raw_light_block"
+    }
+  }
+}

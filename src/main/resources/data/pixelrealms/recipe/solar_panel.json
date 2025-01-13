@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "L": {
+      "item": "pixelrealms:lightorb"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "LLL",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "pixelrealms:light_block"
+  },
+  "show_notification": true
+}

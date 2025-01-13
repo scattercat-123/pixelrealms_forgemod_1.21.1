@@ -1,6 +1,11 @@
 package com.scattercat.pixelrealms;
 
 import com.mojang.logging.LogUtils;
+import com.scattercat.block.ModBlocks;
+import com.scattercat.item.ModCreativeModeTabs;
+import com.scattercat.item.ModItems;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,11 +29,16 @@ public class PixelRealms {
 
     public PixelRealms(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-        // Register the commonSetup method for modloading
+
         modEventBus.addListener(this::commonSetup);
-        // Register ourselves for server and other game events we are interested in
+
         MinecraftForge.EVENT_BUS.register(this);
-        // Register the item to a creative tab
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.regsiter(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -40,13 +50,26 @@ public class PixelRealms {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.LIGHTORB);
+            event.accept(ModItems.RAW_LIGHTORB);
+        }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.CHISEL);
+            event.accept(ModItems.WRENCH);
+            event.accept(ModItems.GLOW_WRENCH);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.LIGHT_BLOCK);
+            event.accept(ModBlocks.RAW_LIGHT_BLOCK);
+            event.accept(ModBlocks.LIGHT_ORE);
+            event.accept(ModBlocks.LIGHT_DEEPSLATE_ORE);
+        }
 
     }
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -54,7 +77,6 @@ public class PixelRealms {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
         }
     }
 }
