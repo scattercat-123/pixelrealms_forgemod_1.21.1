@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=north": {
+			"model": "pixelrealms:block/chiseled_stairs"
+		},
+		"facing=south": {
+			"model": "pixelrealms:block/chiseled_stairs",
+			"y": 180
+		},
+		"facing=east": {
+			"model": "pixelrealms:block/chiseled_stairs",
+			"y": 90
+		},
+		"facing=west": {
+			"model": "pixelrealms:block/chiseled_stairs",
+			"y": 270
+		}
+	}
+}

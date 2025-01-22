@@ -1,6 +1,6 @@
-package com.scattercat.item.custom;
+package com.scattercat.pixelrealms.item.custom;
 
-import com.scattercat.block.ModBlocks;
+import com.scattercat.pixelrealms.block.ModBlocks;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -18,11 +18,16 @@ import java.util.Map;
 public class ChiselItem extends Item {
     private static final Map<Block, Block> CHISEL_MAP =
             Map.of(
+                    Blocks.SAND, Blocks.SANDSTONE,
                     Blocks.STONE, Blocks.STONE_BRICKS,
                     Blocks.END_STONE, Blocks.END_STONE_BRICKS,
                     Blocks.DEEPSLATE, Blocks.DEEPSLATE_BRICKS,
                     Blocks.AMETHYST_BLOCK, ModBlocks.LIGHT_BLOCK.get(),
-                    ModBlocks.LIGHT_BLOCK.get(), Blocks.GLOWSTONE
+                    ModBlocks.LIGHT_BLOCK.get(), Blocks.GLOWSTONE,
+                    Blocks.OAK_STAIRS, ModBlocks.CHISELED_STAIRS.get(),
+                    Blocks.SPRUCE_STAIRS, ModBlocks.CHISELED_STAIRS.get(),
+                    Blocks.BIRCH_STAIRS, ModBlocks.CHISELED_STAIRS.get(),
+                    Blocks.JUNGLE_STAIRS, ModBlocks.CHISELED_STAIRS.get()
             );
 
     public ChiselItem(Properties pProperties) {

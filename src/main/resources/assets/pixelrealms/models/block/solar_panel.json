@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [642, 914],
 	"textures": {
-		"3": "pixelrealms:block/solar_panel"
+		"3": "pixelrealms:block/solar_panel",
+		"particle": "pixelrealms:block/solar_panel"
 	},
 	"elements": [
 		{
@@ -71,7 +72,6 @@
 			}
 		}
 	],
-	"display": {},
 	"groups": [
 		{
 			"name": "group",

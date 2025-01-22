@@ -1,10 +1,9 @@
 package com.scattercat.pixelrealms;
 
 import com.mojang.logging.LogUtils;
-import com.scattercat.block.ModBlocks;
-import com.scattercat.item.ModCreativeModeTabs;
-import com.scattercat.item.ModItems;
-import net.minecraft.server.level.ServerPlayer;
+import com.scattercat.pixelrealms.block.ModBlocks;
+import com.scattercat.pixelrealms.item.ModCreativeModeTabs;
+import com.scattercat.pixelrealms.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -50,20 +49,13 @@ public class PixelRealms {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.LIGHTORB);
-            event.accept(ModItems.RAW_LIGHTORB);
-        }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.CHISEL);
             event.accept(ModItems.WRENCH);
             event.accept(ModItems.GLOW_WRENCH);
         }
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.LIGHT_BLOCK);
-            event.accept(ModBlocks.RAW_LIGHT_BLOCK);
-            event.accept(ModBlocks.LIGHT_ORE);
-            event.accept(ModBlocks.LIGHT_DEEPSLATE_ORE);
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.CHISELED_STAIRS);
         }
 
     }

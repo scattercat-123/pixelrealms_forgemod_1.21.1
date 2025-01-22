@@ -1,6 +1,6 @@
-package com.scattercat.item;
+package com.scattercat.pixelrealms.item;
 
-import com.scattercat.item.custom.ChiselItem;
+import com.scattercat.pixelrealms.item.custom.ChiselItem;
 import com.scattercat.pixelrealms.PixelRealms;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;

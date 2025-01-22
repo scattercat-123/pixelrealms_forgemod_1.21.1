@@ -1,7 +1,8 @@
-package com.scattercat.block;
+package com.scattercat.pixelrealms.block;
 
-import com.scattercat.block.custom.SolarBlock;
-import com.scattercat.item.ModItems;
+import com.scattercat.pixelrealms.block.custom.ChiseledStairs;
+import com.scattercat.pixelrealms.block.custom.SolarBlock;
+import com.scattercat.pixelrealms.item.ModItems;
 import com.scattercat.pixelrealms.PixelRealms;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -36,8 +37,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIGHT_DEEPSLATE_ORE = registerBlock("light_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
     public static final RegistryObject<Block> SOLAR_PANEL = registerBlock("solar_panel",
             () -> new SolarBlock(BlockBehaviour.Properties.of().noOcclusion()));
+    public static final RegistryObject<Block> CHISELED_STAIRS = registerBlock("chiseled_stairs",
+            () -> new ChiseledStairs(BlockBehaviour.Properties.of().noOcclusion().randomTicks()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

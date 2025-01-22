@@ -1,6 +1,6 @@
-package com.scattercat.item;
+package com.scattercat.pixelrealms.item;
 
-import com.scattercat.block.ModBlocks;
+import com.scattercat.pixelrealms.block.ModBlocks;
 import com.scattercat.pixelrealms.PixelRealms;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
