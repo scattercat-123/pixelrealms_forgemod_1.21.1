@@ -21,7 +21,6 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RAW_LIGHT_BLOCK);
 
         blockWithItem(ModBlocks.CHISELED_STAIRS);
-        blockWithItem(ModBlocks.SOLAR_PANEL);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

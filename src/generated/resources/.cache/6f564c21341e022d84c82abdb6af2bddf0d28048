@@ -1,0 +1,5 @@
+// 1.21.1	2025-01-22T18:55:00.8668174	Tags for minecraft:block mod id pixelrealms
+8b9df3680d0e84017bce8d7c0a3e8647d2c54081 data/minecraft/tags/block/mineable/pickaxe.json
+003569c22a3890c4c873f70059539b24fc81d5c4 data/minecraft/tags/block/needs_diamond_tool.json
+7b2f830e79700459b7f22f02ef450b05cb3414a5 data/minecraft/tags/block/needs_iron_tool.json
+0a7fc226dc01d1f123068fde0382f6b7fc0eda17 data/minecraft/tags/block/needs_stone_tool.json

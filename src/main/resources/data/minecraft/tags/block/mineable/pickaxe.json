@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values":[
-    "pixelrealms:light_deepslate_ore",
-    "pixelrealms:light_ore",
-    "pixelrealms:light_block",
-    "pixelrealms:raw_light_block"
-  ]
-}
