@@ -1,3 +1,6 @@
 {
-  "parent": "pixelrealms:item/solar_panel_item"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pixelrealms:item/solar_panel_item"
+  }
 }

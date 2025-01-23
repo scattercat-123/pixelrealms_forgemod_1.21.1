@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "light",
+  "ingredient": {
+    "item": "pixelrealms:light_deepslate_ore"
+  },
+  "result": {
+    "id": "pixelrealms:lightorb"
+  }
+}

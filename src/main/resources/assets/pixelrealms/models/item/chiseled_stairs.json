@@ -1,3 +1,6 @@
 {
-  "parent": "pixelrealms:item/chiseled_stairs_item"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pixelrealms:item/chiseled_stairs_item"
+  }
 }

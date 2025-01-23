@@ -1,19 +1,19 @@
 {
-	"variants": {
-		"facing=north": {
-			"model": "pixelrealms:block/solar_panel"
-		},
-		"facing=south": {
-			"model": "pixelrealms:block/solar_panel",
-			"y": 180
-		},
-		"facing=east": {
-			"model": "pixelrealms:block/solar_panel",
-			"y": 90
-		},
-		"facing=west": {
-			"model": "pixelrealms:block/solar_panel",
-			"y": 270
-		}
-	}
+  "variants": {
+    "facing=north": {
+      "model": "pixelrealms:block/solar_panel"
+    },
+    "facing=south": {
+      "model": "pixelrealms:block/solar_panel",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "pixelrealms:block/solar_panel",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "pixelrealms:block/solar_panel",
+      "y": 270
+    }
+  }
 }
