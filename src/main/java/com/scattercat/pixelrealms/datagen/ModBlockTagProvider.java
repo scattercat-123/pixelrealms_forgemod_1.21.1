@@ -33,5 +33,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SOLAR_PANEL.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.LIGHT_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.LIGHT_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.LIGHT_WALL.get());
     }
 }

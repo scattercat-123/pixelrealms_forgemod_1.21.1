@@ -11,5 +11,21 @@
   "block.pixelrealms.light_deepslate_ore": "Deepslate Light Ore",
   "block.pixelrealms.solar_panel": "Solar Panel",
   "block.pixelrealms.chiseled_stairs": "Chiseled Stairs",
-  "creativetab.pixelrealms.light_items" : "Light Items"
+  "creativetab.pixelrealms.light_items" : "Light Items",
+
+  "block.pixelrealms.light_stair": "Light Stairs",
+  "block.pixelrealms.light_slab": "Light Slab",
+
+  "block.pixelrealms.light_button": "Light Button",
+  "block.pixelrealms.light_pressure_plate": "Light Pressure Plate",
+
+  "block.pixelrealms.light_fence": "Light Fence",
+  "block.pixelrealms.light_fence_gate": "Light Fence Gate",
+  "block.pixelrealms.light_wall": "Light Wall",
+
+  "block.pixelrealms.light_door": "Light Door",
+  "block.pixelrealms.light_trapdoor": "Light Trapdoor",
+
+  "tooltip.pixelrealms.solarblock.tooltip": "Use this block in SUNLIGHT and maybe somehting will happen?",
+  "tooltip.pixelrealms.chisel.tooltip": "Press §6Shift§r Maybe?"
 }

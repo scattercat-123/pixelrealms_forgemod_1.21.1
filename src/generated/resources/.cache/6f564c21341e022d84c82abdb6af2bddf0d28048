@@ -1,5 +1,8 @@
-// 1.21.1	2025-01-22T18:55:00.8668174	Tags for minecraft:block mod id pixelrealms
-8b9df3680d0e84017bce8d7c0a3e8647d2c54081 data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21.1	2025-01-23T22:19:57.3458596	Tags for minecraft:block mod id pixelrealms
+dbc49ebeabfc5c2aa2a733ae8ac82c924d30cddc data/minecraft/tags/block/fences.json
+23a4b08edc5618983fb00b2c2f5f7a3839f28830 data/minecraft/tags/block/fence_gates.json
+d8f4c01688caf519eb5e8ebad7b061b0b59ee9ab data/minecraft/tags/block/mineable/pickaxe.json
 003569c22a3890c4c873f70059539b24fc81d5c4 data/minecraft/tags/block/needs_diamond_tool.json
 7b2f830e79700459b7f22f02ef450b05cb3414a5 data/minecraft/tags/block/needs_iron_tool.json
 0a7fc226dc01d1f123068fde0382f6b7fc0eda17 data/minecraft/tags/block/needs_stone_tool.json
+cfa83184254e739f7b5e614b06b76aa3c62e8415 data/minecraft/tags/block/walls.json

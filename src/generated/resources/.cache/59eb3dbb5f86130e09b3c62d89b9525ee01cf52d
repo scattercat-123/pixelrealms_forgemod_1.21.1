@@ -1,7 +1,16 @@
-// 1.21.1	2025-01-22T18:16:53.5426052	Loot Tables
+// 1.21.1	2025-01-23T22:19:57.341147	Loot Tables
 eecdc422682cbe73700789f0fd62b7fc585cf28e data/pixelrealms/loot_table/blocks/chiseled_stairs.json
 0dbff61ecc50a25c8419a152055f57c2cacc7a6b data/pixelrealms/loot_table/blocks/light_block.json
+87515158bf018feb0f99db8698d4720dc07aa278 data/pixelrealms/loot_table/blocks/light_button.json
 ba23291b41ca4a91d0a1169e4b484571b65b4072 data/pixelrealms/loot_table/blocks/light_deepslate_ore.json
+c8c729ca428608bd1bb1fe76b8ee9a7cbc8da9f9 data/pixelrealms/loot_table/blocks/light_door.json
+43e17ed4e7e7ad40d36eb0afbfc995e29e530db6 data/pixelrealms/loot_table/blocks/light_fence.json
+adb045a8c51eebbabc197241d01d61f56b85cf24 data/pixelrealms/loot_table/blocks/light_fence_gate.json
 0b7277ccc35d72d5fca059dd4cd34ea3b753ba78 data/pixelrealms/loot_table/blocks/light_ore.json
+0086a287a99a1e7ca3af38935c2c5c558bc33b7e data/pixelrealms/loot_table/blocks/light_pressure_plate.json
+09fc44d27e06a1f02869ecd77e1ff4100618a698 data/pixelrealms/loot_table/blocks/light_slab.json
+e4d7ca2f8a01ede7664f69feca4d981d72db984e data/pixelrealms/loot_table/blocks/light_stair.json
+01e728df49edf7ee5e3ad05a363d4f73a5d95349 data/pixelrealms/loot_table/blocks/light_trapdoor.json
+42605608d344a76b934e949147e9cd70131cfdf4 data/pixelrealms/loot_table/blocks/light_wall.json
 599ad407443136f765f1028cc4540e25054628f0 data/pixelrealms/loot_table/blocks/raw_light_block.json
 3c38b0a31df47710f4e1ee5b2a4ee1d06214eac6 data/pixelrealms/loot_table/blocks/solar_panel.json

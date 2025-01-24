@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "light",
+  "ingredients": [
+    {
+      "item": "pixelrealms:lightorb"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pixelrealms:light_button"
+  }
+}

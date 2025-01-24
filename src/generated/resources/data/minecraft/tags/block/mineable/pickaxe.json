@@ -4,7 +4,6 @@
     "pixelrealms:raw_light_block",
     "pixelrealms:light_ore",
     "pixelrealms:light_deepslate_ore",
-    "pixelrealms:chiseled_stairs",
-    "pixelrealms:solar_panel"
+    "pixelrealms:chiseled_stairs"
   ]
 }

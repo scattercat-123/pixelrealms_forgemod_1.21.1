@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "pixelrealms:block/light_block",
+    "side": "pixelrealms:block/light_block",
+    "top": "pixelrealms:block/light_block"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "light",
+  "key": {
+    "#": {
+      "item": "pixelrealms:lightorb"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "pixelrealms:light_door"
+  }
+}

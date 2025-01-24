@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "light",
+  "key": {
+    "#": {
+      "item": "pixelrealms:lightorb"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "pixelrealms:light_stair"
+  }
+}

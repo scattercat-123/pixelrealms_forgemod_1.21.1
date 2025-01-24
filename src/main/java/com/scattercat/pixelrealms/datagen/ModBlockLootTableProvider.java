@@ -33,6 +33,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHISELED_STAIRS.get());
         dropSelf(ModBlocks.SOLAR_PANEL.get());
 
+        dropSelf(ModBlocks.LIGHT_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.LIGHT_TRAPDOOR.get());
+        dropSelf(ModBlocks.LIGHT_FENCE.get());
+        dropSelf(ModBlocks.LIGHT_DOOR.get());
+        dropSelf(ModBlocks.LIGHT_BUTTON.get());
+        dropSelf(ModBlocks.LIGHT_FENCE_GATE.get());
+
+        dropSelf(ModBlocks.LIGHT_STAIR.get());
+        dropSelf(ModBlocks.LIGHT_WALL.get());
+        this.add(ModBlocks.LIGHT_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LIGHT_SLAB.get()));
+        this.add(ModBlocks.LIGHT_DOOR.get(),
+                block -> createDoorTable(ModBlocks.LIGHT_DOOR.get()));
+
         this.add(ModBlocks.LIGHT_ORE.get(),
                 block -> createOreDrop(ModBlocks.LIGHT_ORE.get(), ModItems.RAW_LIGHTORB.get()));
         this.add(ModBlocks.LIGHT_DEEPSLATE_ORE.get(),

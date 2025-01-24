@@ -26,6 +26,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_LIGHT_BLOCK.get());
                         output.accept(ModBlocks.LIGHT_ORE.get());
                         output.accept(ModBlocks.LIGHT_DEEPSLATE_ORE.get());
+
+                        output.accept(ModBlocks.LIGHT_STAIR.get());
+                        output.accept(ModBlocks.LIGHT_BUTTON.get());
+                        output.accept(ModBlocks.LIGHT_DOOR.get());
+                        output.accept(ModBlocks.LIGHT_FENCE.get());
+                        output.accept(ModBlocks.LIGHT_FENCE_GATE.get());
+                        output.accept(ModBlocks.LIGHT_WALL.get());
+                        output.accept(ModBlocks.LIGHT_SLAB.get());
+                        output.accept(ModBlocks.LIGHT_TRAPDOOR.get());
+                        output.accept(ModBlocks.LIGHT_PRESSURE_PLATE.get());
+
                         output.accept(ModBlocks.SOLAR_PANEL.get());
                     })
                     .build());

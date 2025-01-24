@@ -1,4 +1,8 @@
-// 1.21.1	2025-01-22T18:29:47.927936	Item Models: pixelrealms
+// 1.21.1	2025-01-24T16:09:43.7159599	Item Models: pixelrealms
 3df631cc6870249433f89714836055a9d70f31cd assets/pixelrealms/models/item/chisel.json
 45549ee4d88313705db2bfcf9866a0320bcde5f8 assets/pixelrealms/models/item/lightorb.json
+bd8fdb18fee0b6c6f02cac369ac6d4bdff01b77e assets/pixelrealms/models/item/light_button.json
+a2c9fa2d672e0965a2e582c5e484e2f01a0e24e4 assets/pixelrealms/models/item/light_door.json
+6c1579a303ce3706c2597c054b07fb77259cc168 assets/pixelrealms/models/item/light_fence.json
+e71da1c2f3727b07401bf73370ed48fa378909e7 assets/pixelrealms/models/item/light_wall.json
 20564512cf7c4ec6db28abc3acbb6a5aecadbdda assets/pixelrealms/models/item/raw_lightorb.json

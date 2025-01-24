@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pixelrealms:block/light_slab"
+    },
+    "type=double": {
+      "model": "pixelrealms:block/light_block"
+    },
+    "type=top": {
+      "model": "pixelrealms:block/light_slab_top"
+    }
+  }
+}
