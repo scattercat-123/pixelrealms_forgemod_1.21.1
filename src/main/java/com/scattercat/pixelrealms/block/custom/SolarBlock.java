@@ -4,15 +4,24 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -26,10 +35,12 @@ import java.util.Map;
 public class SolarBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<SolarBlock> CODEC = simpleCodec(SolarBlock::new);
     private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
-
+    public static final IntegerProperty POWER = BlockStateProperties.POWER;
     public SolarBlock(Properties pProperties) {
-        super(pProperties);
-        // Precompute rotated shapes for all directions
+        super(pProperties.randomTicks());
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(POWER, 0)
+                .setValue(FACING, Direction.NORTH));
         VoxelShape baseShape = makeShape();
         for (Direction direction : Direction.Plane.HORIZONTAL) {
             SHAPES.put(direction, calculateShapes(direction, baseShape));
@@ -51,10 +62,20 @@ public class SolarBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        // Get the rotated shape based on the facing direction
         Direction direction = pState.getValue(FACING);
         return SHAPES.get(direction);
     }
+
+    @Override
+    protected boolean useShapeForLightOcclusion(BlockState pState) {
+        return true;
+    }
+
+    @Override
+    protected int getSignal(BlockState pBlockState, BlockGetter pBlockAccess, BlockPos pPos, Direction pSide) {
+        return pBlockState.getValue(POWER);
+    }
+
 
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
@@ -63,13 +84,13 @@ public class SolarBlock extends HorizontalDirectionalBlock {
 
     @Nullable
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(FACING);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(POWER, FACING);
     }
 
     @Override
@@ -92,5 +113,35 @@ public class SolarBlock extends HorizontalDirectionalBlock {
 
         return buffer[0];
     }
-}
+    private static void updateSignalStrength(BlockState state, Level level, BlockPos pos) {
+        int skyBrightness = level.getBrightness(LightLayer.SKY, pos) - level.getSkyDarken();
+        float sunAngle = level.getSunAngle(1.0F);
 
+        if (skyBrightness > 0) {
+            float adjustmentFactor = sunAngle < Math.PI ? 0.0F : (float) (2 * Math.PI);
+            sunAngle += (adjustmentFactor - sunAngle) * 0.2F;
+            skyBrightness = Math.round(skyBrightness * Mth.cos(sunAngle));
+        }
+
+        skyBrightness = Mth.clamp(skyBrightness, 0, 15);
+        if (state.getValue(POWER) != skyBrightness) {
+            level.setBlock(pos, state.setValue(POWER, skyBrightness), 3);
+        }
+    }
+    @Nullable
+    protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> createTickerHelper(
+            BlockEntityType<A> givenType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
+        return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
+    }
+
+    @Override
+    protected boolean isSignalSource(BlockState pState) {
+        return true;
+    }
+
+    public void tick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        if (level.getGameTime() % 20L == 0L) {
+            updateSignalStrength(state, level, pos);
+        }
+    }
+}

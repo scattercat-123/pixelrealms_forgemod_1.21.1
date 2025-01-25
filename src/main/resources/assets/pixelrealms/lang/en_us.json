@@ -27,5 +27,7 @@
   "block.pixelrealms.light_trapdoor": "Light Trapdoor",
 
   "tooltip.pixelrealms.solarblock.tooltip": "Use this block in SUNLIGHT and maybe somehting will happen?",
-  "tooltip.pixelrealms.chisel.tooltip": "Press §6Shift§r Maybe?"
+  "tooltip.pixelrealms.chisel.tooltip": "Press §6Shift§r Maybe?",
+  "tooltip.pixelrealms.chisel.shift_down": "Use this item on §cS§r§bO§r§6M§r§9E§r items? not §r§luseless§r",
+  "tooltip.pixelrealms.chiseled_stairs.tooltip": "§7Perfect for builders who want §b§lelegance!§r §6Chiseled Stairs: §eMore detailed than regular stairs."
 }

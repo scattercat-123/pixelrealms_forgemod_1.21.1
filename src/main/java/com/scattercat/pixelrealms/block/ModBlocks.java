@@ -45,27 +45,27 @@ public class ModBlocks {
 
     public static final RegistryObject<StairBlock> LIGHT_STAIR = registerBlock("light_stair",
             () -> new StairBlock(ModBlocks.LIGHT_BLOCK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13)));
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13).sound(SoundType.AMETHYST)));
     public static final RegistryObject<SlabBlock> LIGHT_SLAB = registerBlock("light_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13)));
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13).sound(SoundType.AMETHYST)));
 
 
     public static final RegistryObject<PressurePlateBlock> LIGHT_PRESSURE_PLATE = registerBlock("light_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13)));
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST).lightLevel(value -> 13)));
     public static final RegistryObject<ButtonBlock> LIGHT_BUTTON = registerBlock("light_button",
-            () -> new ButtonBlock(BlockSetType.IRON, 20, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noCollission().lightLevel(value -> 13)));
+            () -> new ButtonBlock(BlockSetType.IRON, 20, BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).strength(3f).requiresCorrectToolForDrops().noCollission().lightLevel(value -> 13)));
 
     public static final RegistryObject<FenceBlock> LIGHT_FENCE = registerBlock("light_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13)));
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST).lightLevel(value -> 13)));
     public static final RegistryObject<FenceGateBlock> LIGHT_FENCE_GATE = registerBlock("light_fence_gate",
-            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13)));
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13)));
     public static final RegistryObject<WallBlock> LIGHT_WALL = registerBlock("light_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().lightLevel(value -> 13)));
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(3f).sound(SoundType.AMETHYST).requiresCorrectToolForDrops().lightLevel(value -> 13)));
 
     public static final RegistryObject<DoorBlock> LIGHT_DOOR = registerBlock("light_door",
-            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion().lightLevel(value -> 13)));
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).strength(3f).requiresCorrectToolForDrops().noOcclusion().lightLevel(value -> 13)));
     public static final RegistryObject<TrapDoorBlock> LIGHT_TRAPDOOR = registerBlock("light_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion().lightLevel(value -> 13)));
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).strength(3f).requiresCorrectToolForDrops().noOcclusion().lightLevel(value -> 13)));
 
 
 
